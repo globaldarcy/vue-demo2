@@ -15,4 +15,6 @@ new Vue({
 
 
 import Vue from 'vue'
-import router from './router-a'
+import router from './router-d'
+
+

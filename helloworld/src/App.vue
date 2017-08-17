@@ -15,7 +15,7 @@ export default {
 
 
 
-<template>
+<!--<template>
   <div id="app">
     <img src="./assets/logo.png">
     <h1>导航</h1>
@@ -28,9 +28,24 @@ export default {
     <router-view name="left" class="left"></router-view>
     <router-view name="right" class="right"></router-view>
   </div>
+</template>-->
+
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <h1>Good Morning</h1>
+    <ul>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/params/111/222">Params</router-link></li>
+      <li><router-link to="/params-regex/333">Regex</router-link></li>
+    </ul>
+    <p>Show</p>
+    <pre>
+      <code>{{ $route.params.id }}</code>
+      <code>{{ JSON.stringify($route, null, 2) }}</code>
+    </pre>
+  </div>
 </template>
-
-
 
 <style>
 #app {
@@ -52,4 +67,10 @@ export default {
   background: silver;
   height: 300px;
 }
+  a.router-link-active{
+    color: red;
+  }
+  li.router-link-active a{
+    color: brown;
+  }
 </style>
