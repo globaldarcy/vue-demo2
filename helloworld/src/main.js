@@ -14,7 +14,36 @@ new Vue({
 })*/
 
 
+/*import transition from './transition.vue'
 import Vue from 'vue'
 import router from './router-d'
 
+var vm = new Vue({
+  el:'#app',
+  router,
+  data:{
+      show: true,
+      aaa:'fade'
+  },
+  watch:{
+    '$route'(to, from){
+      //console.log(to,from);
+      if(from.path == '/parent' ){
+        this.aaa ='fadeIn';
+      }else{
+        this.aaa = 'fade';
+      }
+    }
+  },
+  render: x => x(transition)
+})*/
 
+import Vue from 'vue'
+import store from './store'
+import vuex from './vuex'
+
+new Vue({
+  el:'#app',
+  store,
+  render: x => x(vuex)
+})
